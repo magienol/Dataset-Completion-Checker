@@ -99,7 +99,7 @@ The application supports:
 
 | Component        | Requirement                |
 | ---------------- | -------------------------- |
-| DHIS2            | 2.40 – 2.43.1              |
+| DHIS2            | 2.40 – 2.43                |
 | Dataset type     | Monthly                    |
 | Authentication   | DHIS2 authentication       |
 | External backend | Not required               |
@@ -428,7 +428,6 @@ DHIS2 2.40
 DHIS2 2.41
 DHIS2 2.42
 DHIS2 2.43
-DHIS2 2.43.1
 ```
 
 > **Note:** Compatibility may depend on the DHIS2 Web API and application platform behavior of the specific DHIS2 version. Testing against the target DHIS2 instance is recommended before production deployment.

@@ -1,5 +1,5 @@
 /**
- * Response and payload helpers that stay compatible from DHIS2 2.40 through 2.43.1.0.
+ * Response and payload helpers that stay compatible from DHIS2 2.40 through 2.43.
  */
 
 export const extractCollection = (payload, key) => {

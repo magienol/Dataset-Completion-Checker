@@ -198,7 +198,7 @@ export function App() {
         }
     }, [userData])
 
-    // Server version check for 2.40–2.43.1.0 including SNAPSHOT builds
+    // Server version check for 2.40–2.43 including SNAPSHOT builds
     const serverVersion =
         runtimeConfig?.serverVersion?.full ||
         runtimeConfig?.systemInfo?.version ||

@@ -1,6 +1,6 @@
 {
   "name": "dataset-complete-checker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check whether monthly datasets have data and whether they are marked complete",
   "license": "MIT",
   "private": true,

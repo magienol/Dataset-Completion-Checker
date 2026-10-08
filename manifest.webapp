@@ -1,6 +1,6 @@
 {
   "name": "Dataset Completion Checker App",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest_version": 1,
   "description": "Check datasets for data and mark them as completed",
   "developer": {
@@ -13,18 +13,18 @@
     "48": "dhis2-app-icon.png",
     "128": "img/checker-128.png"
   },
-  "minDhisVersion": "2.40-SNAPSHOT",
-  "maxDhisVersion": "2.43.1.0",
-  "min_dhis2_version": "2.40-SNAPSHOT",
-  "max_dhis2_version": "2.43.1.0",
+  "minDhisVersion": "2.40",
+  "maxDhisVersion": "2.43",
+  "min_dhis2_version": "2.40",
+  "max_dhis2_version": "2.43",
   "dhis2": {
     "app": {
       "title": "Dataset Completion Checker App",
       "description": "Check which datasets have data but are not marked complete, then mark them as completed.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "type": "app",
-      "minDhis2Version": "2.40-SNAPSHOT",
-      "maxDhis2Version": "2.43.1.0"
+      "minDhis2Version": "2.40",
+      "maxDhis2Version": "2.43"
     }
   },
   "scope": "./",

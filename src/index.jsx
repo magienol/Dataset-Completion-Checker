@@ -6,7 +6,7 @@ import App from './App'
 const config = {
     baseUrl: '..',
     // Fallback only for standalone mounts. The DHIS2 app shell uses the
-    // server's own API version so 2.40–2.43.1.0 SNAPSHOT instances work.
+    // server's own API version so 2.40–2.43 SNAPSHOT instances work.
     apiVersion: 40,
 }
 
