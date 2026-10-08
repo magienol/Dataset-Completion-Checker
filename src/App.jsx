@@ -37,7 +37,6 @@ import './App.css'
 
 const unpagedParams = {
     paging: false,
-    skipPaging: true,
 }
 
 const dataSetsQuery = {
@@ -45,7 +44,6 @@ const dataSetsQuery = {
         resource: 'dataSets',
         params: {
             fields: 'id,displayName,periodType',
-            filter: 'periodType:eq:Monthly',
             ...unpagedParams,
         }
     }
@@ -56,7 +54,7 @@ const orgUnitRootsQuery = {
         resource: 'organisationUnits',
         params: {
             fields: 'id',
-            level: 1,
+            filter: 'level:eq:1',
             paging: false,
         },
     },
@@ -86,7 +84,6 @@ const orgUnitLevelsQuery = {
         resource: 'organisationUnitLevels',
         params: {
             fields: 'id,level,displayName,name',
-            order: 'level:asc',
             paging: false,
         },
     },
@@ -424,11 +421,12 @@ export function App() {
     // Early returns for loading/error (correctly placed after all hook declarations)
     const error = datasetsError || userError || groupsError
     if (error) {
+        const serverMessage = error.details?.message
         return (
             <div className="app-container">
                 <CssVariables colors spacers theme elevations />
-                <NoticeBox title="Could not connect to DHIS2" error>
-                    {error.message}. Verify the DHIS2 instance connection and try again.
+                <NoticeBox title="Could not load data from DHIS2" error>
+                    {serverMessage || error.message}. Verify that this user can read datasets and organisation units, then reload the app.
                 </NoticeBox>
             </div>
         )
@@ -487,6 +485,7 @@ export function App() {
         'organisationUnitGroups'
     )
     const allDataSets = extractCollection(datasetsData?.dataSets, 'dataSets')
+        .filter((dataSet) => !dataSet.periodType || dataSet.periodType === 'Monthly')
 
     const handleApply = () => {
         if (!period.trim()) {

@@ -533,7 +533,7 @@ v1.1.1
 
 **MoH South Sudan — Health Information System Team**
 
-**HISP South Sudan**
+**HISP South Sudan — Health Information System Team**
 
 ---
 
